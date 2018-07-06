@@ -1,0 +1,13 @@
+<div>
+	<label for="chkdisponible">Trie sur disponibilité</label>
+	<input name="chkdisponible" type="checkbox" (click)="showDisponible($event)">
+</div>
+<div class="container">
+<div class="row">
+  <div class="col-3">Titre</div>
+  <div class="col-3">Auteur</div>
+  <div class="col-3">Annee Parution</div>
+  <div class="col-3">Disponibilité</div>
+</div>
+<app-livre *ngFor="let livre of livres" [data]="livre" [ngStyle]="{'display':livre.Dispo == chkdispo ? 'table-row' : 'none'}"></app-livre>
+</div>
